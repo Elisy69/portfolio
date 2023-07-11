@@ -1,8 +1,14 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import IconLanguage from "../assets/svg/IconLanguage";
+import { useLanguage } from "../store/store";
 
 function LanguageMenu() {
+  const [switchToRussian, switchToEnglish] = useLanguage((state) => [
+    state.switchToRussian,
+    state.switchToEnglish,
+  ]);
+
   return (
     <Menu as="div" className="relative mr-2">
       <Menu.Button className="flex cursor-pointer items-center justify-center rounded-lg border border-[#2E254D] hover:border-night-theme-primary active:outline active:outline-night-theme-accent p-2 text-left ">
@@ -22,6 +28,7 @@ function LanguageMenu() {
             <Menu.Item>
               {({ active }) => (
                 <button
+                  onClick={() => switchToEnglish()}
                   className={`${
                     active
                       ? "bg-night-theme-accent text-night-theme-bg"
@@ -35,6 +42,7 @@ function LanguageMenu() {
             <Menu.Item>
               {({ active }) => (
                 <button
+                  onClick={() => switchToRussian()}
                   className={`${
                     active
                       ? "bg-night-theme-accent text-night-theme-bg"

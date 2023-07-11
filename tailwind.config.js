@@ -12,6 +12,8 @@ export default {
       },
       fontFamily: {
         "my-for-title": ["myFont"],
+        "my-for-titleRus": ["myFontRus"],
+        "my-for-titleRusTwo": ["myFontRus_two"],
       },
     },
   },

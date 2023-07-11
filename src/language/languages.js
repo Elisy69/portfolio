@@ -6,4 +6,5 @@ export const text = {
   "Creative": { en: "Creative", ru: "Креативные" },
   "Interactive": { en: "Interactive", ru: "Интерактивные" },
   "webapps": { en: "webapps", ru: "веб-приложения" },
+  "workstatus": { en: "Available for work", ru: "Вакансия открыта" },
 };
