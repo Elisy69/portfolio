@@ -21,9 +21,13 @@ function HelloTitle() {
   const lang = useLanguage((state) => state.lang);
   const [font, setFont] = useState(false);
   const [titleText, setTitleText] = useState({
-    headerOne: [text["Hello!"][lang], "I'm", "Elisei"],
-    headerTwo: ["I'm", "developing", "Creative"],
-    headerThree: ["&", "Interactive", "webapps", "🚀"],
+    headerOne: [text["Hello!"][lang], text["I'm"][lang], text["Elisei"][lang]],
+    headerTwo: [
+      text["I'm"][lang],
+      text["developing"][lang],
+      text["Creative"][lang],
+    ],
+    headerThree: ["&", text["Interactive"][lang], text["webapps"][lang], "🚀"],
   });
 
   useEffect(() => {
@@ -59,7 +63,7 @@ function HelloTitle() {
   }
 
   return (
-    <div className="flex flex-col self-center font-bold justify-start px-3 ">
+    <div className=" pt-[56px] flex flex-col self-center font-bold justify-start px-3 ">
       <div className="flex">
         <AvatarImg />
       </div>
@@ -87,6 +91,7 @@ function HelloTitle() {
         >
           {renderHeader(titleText.headerTwo, 2)}
         </motion.div>
+
         <motion.div
           className={`flex flex-wrap  ${
             font
@@ -104,7 +109,7 @@ function HelloTitle() {
         transition={{ duration: 1 }}
         className="font-normal self-end m-4 hover:text-night-theme-accent cursor-pointer"
       >
-        ——— {text["workstatus"][lang]}
+        — {text["workstatus"][lang]}
       </motion.h4>
     </div>
   );

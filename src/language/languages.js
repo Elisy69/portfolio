@@ -7,4 +7,10 @@ export const text = {
   "Interactive": { en: "Interactive", ru: "Интерактивные" },
   "webapps": { en: "webapps", ru: "веб-приложения" },
   "workstatus": { en: "Available for work", ru: "Вакансия открыта" },
+  "English": { en: "English", ru: "Английский" },
+  "Russian": { en: "Russian", ru: "Русский" },
+  "Home": { en: "Home", ru: "Наверх" },
+  "About": { en: "About", ru: "Опыт" },
+  "Projects": { en: "Projects", ru: "Проекты" },
+  "Contact": { en: "Contact", ru: "Связь" },
 };

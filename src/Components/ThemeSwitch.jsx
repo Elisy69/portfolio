@@ -1,23 +1,27 @@
 import { Switch } from "@headlessui/react";
-import { useState } from "react";
+import IconMoon from "../assets/svg/IconMoon";
+import IconSun from "../assets/svg/IconSun";
+import { useTheme } from "../store/store";
 
 function ThemeSwitch() {
-  const [enabled, setEnabled] = useState(false);
+  const [isLight, toggleTheme] = useTheme((state) => [
+    state.isLight,
+    state.toggleTheme,
+  ]);
 
   return (
     <Switch
-      checked={enabled}
-      onChange={setEnabled}
-      className={`self-center ${
-        enabled ? "bg-blue-600" : "bg-gray-200"
-      } relative inline-flex h-6 w-11 items-center rounded-full`}
+      checked={isLight}
+      onClick={() => toggleTheme()}
+      className="self-center bg-day-theme-accent outline-night-theme-accent dark:bg-night-theme-primary hover:outline outline-2  dark:outline-violet-900 relative inline-flex h-8 w-14 items-center rounded-full"
     >
-      <span className="sr-only">Enable notifications</span>
-      <span
+      <div
         className={`${
-          enabled ? "translate-x-6" : "translate-x-1"
-        } inline-block h-4 w-4 transform rounded-full bg-white transition`}
-      />
+          isLight ? "translate-x-1" : " translate-x-7"
+        }  inline-block h-4 w-4 transform rounded-full bg-transparent transition pb-6`}
+      >
+        {isLight ? <IconSun /> : <IconMoon />}
+      </div>
     </Switch>
   );
 }
