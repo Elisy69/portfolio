@@ -13,7 +13,7 @@ function ThemeSwitch() {
     <Switch
       checked={isLight}
       onClick={() => toggleTheme()}
-      className="self-center bg-day-theme-accent outline-night-theme-accent dark:bg-night-theme-primary hover:outline outline-2  dark:outline-violet-900 relative inline-flex h-8 w-14 items-center rounded-full"
+      className="lg:mr-4 self-center bg-day-theme-accent outline-night-theme-accent dark:bg-night-theme-primary hover:outline outline-2  dark:outline-violet-900 relative inline-flex h-8 w-14 items-center rounded-full"
     >
       <div
         className={`${

@@ -3,19 +3,19 @@
 @tailwind utilities;
 @font-face {
   font-family: myFont;
-  src: url(src/assets/fonts/gilmer-outline.otf);
+  src: url(/fonts/gilmer-outline.otf);
 }
 @font-face {
   font-family: myFontRus;
-  src: url(src/assets/fonts/lack-line-regular.otf);
+  src: url(/fonts/lack-line-regular.otf);
 }
 @font-face {
   font-family: myFontRus_two;
-  src: url(src/assets/fonts/BitterPro-SemiBold.ttf);
+  src: url(/fonts/BitterPro-SemiBold.ttf);
 }
 @font-face {
   font-family: myFontUniverasal;
-  src: url(src/assets/fonts/Golos-Text_Medium.ttf);
+  src: url(/fonts/Golos-Text_Medium.ttf);
 }
 
 .borderanimation {
@@ -45,6 +45,6 @@
 }
 
 .customscrollbar::-webkit-scrollbar-thumb {
-  background-color: rgba(150, 150, 150, 0.596);
+  background-color: rgb(150, 150, 150);
   border-radius: 100px;
 }

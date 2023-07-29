@@ -1,47 +1,64 @@
 import { motion } from "framer-motion";
 import { nanoid } from "nanoid";
-import { useEffect, useState } from "react";
+import { forwardRef, memo, useEffect, useState } from "react";
+import { text } from "../language/languages";
 import { useLanguage } from "../store/store";
+import Project from "./Project";
 
-const titleAnimation = {
-  hidden: {
-    y: 50,
-    opacity: 0,
-  },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.5, delay: 0.3 },
-  },
-};
+const mocktext =
+  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus magni alias assumenda illo unde iusto, cumque necessitatibus sequi deleniti reprehenderit officiis excepturi. Consequuntur tenetur obcaecati officiis iure rerum, harum adipisci.";
+const title = "Budget app";
 
-function ProjectsList() {
-  const lang = useLanguage((state) => state.lang);
-  const [font, setFont] = useState(false);
+const projects = [
+  { title: title, mocktext: mocktext, imgsrc: "public/images/mock.jpeg" },
+  { title: title, mocktext: mocktext, imgsrc: "public/images/mock.jpeg" },
+  { title: title, mocktext: mocktext, imgsrc: "public/images/mock.jpeg" },
+  { title: title, mocktext: mocktext, imgsrc: "public/images/mock.jpeg" },
+  { title: title, mocktext: mocktext, imgsrc: "public/images/mock.jpeg" },
+];
 
-  useEffect(() => {
-    setFont(!font);
-  }, [lang]);
+const ProjectsList = memo(
+  forwardRef(function Projects(props, ref) {
+    const lang = useLanguage((state) => state.lang);
+    const [font, setFont] = useState(false);
 
-  return (
-    <motion.section
-      key={nanoid}
-      initial="hidden"
-      whileInView="visible"
-      className="flex flex-col justify-center items-center px-2"
-    >
-      <motion.h1
-        variants={titleAnimation}
-        className={`text-5xl mb-4 flex ${
-          font
-            ? `font-my-for-title gap-3`
-            : `font-my-for-titleRus text-[2.5rem] gap-1.5`
-        }`}
+    useEffect(() => {
+      setFont(!font);
+    }, [lang]);
+
+    return (
+      <section
+        ref={(el) => (ref.current[2] = el)}
+        className="flex flex-col justify-center items-center px-2 gap-6 mt-10"
       >
-        Featured Projects
-      </motion.h1>
-    </motion.section>
-  );
-}
+        <motion.h1
+          initial={{
+            y: 80,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: { duration: 0.3, delay: 0.3 },
+          }}
+          viewport={{ once: true }}
+          className={`my-[2rem] text-7xl lg:text-8xl xl:text-9xl self-start lg:self-center lg:mb-[12rem] ${
+            font ? `font-my-for-title gap-3` : `font-my-for-titleRus gap-1.5`
+          }`}
+        >
+          {text["projectsTitle"][lang]}
+        </motion.h1>
+        {projects.map((project) => (
+          <Project
+            imgsrc={project.imgsrc}
+            text={project.mocktext}
+            title={project.title}
+            key={nanoid()}
+          />
+        ))}
+      </section>
+    );
+  })
+);
 
 export default ProjectsList;

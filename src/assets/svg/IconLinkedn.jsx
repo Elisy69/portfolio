@@ -1,8 +1,8 @@
-function IconLinkden() {
+function IconLinkden({ size }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-14 h-14"
+      className={size}
       viewBox="0 0 48 48"
     >
       <circle cx="24" cy="24" r="20" fill="#0288D1"></circle>

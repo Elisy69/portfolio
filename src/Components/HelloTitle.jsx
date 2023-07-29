@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { nanoid } from "nanoid";
-import { useEffect, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import { text } from "../language/languages";
 import { useLanguage } from "../store/store";
-import AvatarImg from "./AvatarImg";
+import AvatarSection from "./AvatarSection";
 
 const titleAnimation = {
   hidden: {
@@ -17,7 +17,7 @@ const titleAnimation = {
   }),
 };
 
-function HelloTitle() {
+const HelloTitle = forwardRef(function HelloTitle(props, ref) {
   const lang = useLanguage((state) => state.lang);
   const [font, setFont] = useState(false);
   const [titleText, setTitleText] = useState({
@@ -63,40 +63,41 @@ function HelloTitle() {
   }
 
   return (
-    <div className=" pt-[56px] flex flex-col self-center font-bold justify-start px-3 ">
-      <div className="flex">
-        <AvatarImg />
-      </div>
+    <div
+      ref={(el) => (ref.current[0] = el)}
+      className="pt-[56px] lg:pt-[76px] flex flex-col self-center font-bold justify-start px-3 lg:w-3/5"
+    >
+      <AvatarSection />
       <motion.section
         key={nanoid()}
         initial="hidden"
-        whileInView="visible"
+        animate="visible"
         className="flex flex-col"
       >
         <motion.div
-          className={`text-5xl mb-4 flex ${
+          className={`text-5xl lg:text-[5vw] mb-4 flex lg:gap-x-3 xl:gap-x-6 ${
             font
               ? `font-my-for-title gap-3`
-              : `font-my-for-titleRus text-[2.5rem] gap-1.5`
+              : `font-my-for-titleRus text-[2.5rem] lg:text-[5vw] gap-1.5`
           }`}
         >
           {renderHeader(titleText.headerOne)}
         </motion.div>
         <motion.div
-          className={`flex flex-wrap  ${
+          className={`flex flex-wrap lg:gap-x-3 ${
             font
-              ? `text-5xl gap-x-3`
-              : `font-my-for-titleRusTwo text-[2rem] gap-x-2`
+              ? `text-5xl lg:text-[5vw] gap-x-3 xl:gap-x-6`
+              : `font-my-for-titleRusTwo text-[2rem] lg:text-[3vw] gap-x-2`
           }`}
         >
           {renderHeader(titleText.headerTwo, 2)}
         </motion.div>
 
         <motion.div
-          className={`flex flex-wrap  ${
+          className={`flex flex-wrap lg:gap-x-4  ${
             font
-              ? `text-5xl gap-x-3`
-              : `font-my-for-titleRusTwo text-[2rem] gap-x-2`
+              ? `text-5xl lg:text-[5vw] gap-x-3 xl:gap-x-6`
+              : `font-my-for-titleRusTwo text-[2rem] lg:text-[3vw] gap-x-2`
           }`}
         >
           {renderHeader(titleText.headerThree, 3)}
@@ -113,6 +114,6 @@ function HelloTitle() {
       </motion.h4>
     </div>
   );
-}
+});
 
 export default HelloTitle;

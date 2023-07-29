@@ -1,18 +1,17 @@
 import { motion } from "framer-motion";
-import { nanoid } from "nanoid";
-import IconGithub from "/Users/strashevskyelisey/Desktop/coding/Projects/portfolio/src/assets/svg/IconGithub.jsx";
-import IconHabr from "/Users/strashevskyelisey/Desktop/coding/Projects/portfolio/src/assets/svg/IconHabr.jsx";
-import IconLinkedn from "/Users/strashevskyelisey/Desktop/coding/Projects/portfolio/src/assets/svg/IconLinkedn.jsx";
+import IconGithub from "/src/assets/svg/IconGithub.jsx";
+import IconHabr from "/src/assets/svg/IconHabr.jsx";
+import IconLinkedn from "/src/assets/svg/IconLinkedn.jsx";
 
-function SocialMediaIcon({ site }) {
+function SocialMediaIcon({ site, cssForLargerScreen }) {
   function renderIcon(site) {
     switch (site) {
       case "github":
-        return <IconGithub />;
+        return <IconGithub size="w-12 h-12 xl:w-16 xl:h-16" />;
       case "linkedn":
-        return <IconLinkedn />;
+        return <IconLinkedn size="w-14 h-14 xl:w-[4.5rem] xl:h-[4.5rem]" />;
       case "habr":
-        return <IconHabr />;
+        return <IconHabr size="w-12 h-12 xl:w-16 xl:h-16" />;
     }
   }
   return (
@@ -24,15 +23,13 @@ function SocialMediaIcon({ site }) {
         scale: 1.1,
         transition: { duration: 0.3 },
       }}
-      key={nanoid}
-      className="cursor-pointer bg-day-theme-secondary dark:bg-night-theme-primary h-20 w-20 flex justify-center items-center rounded-full"
+      className={`${cssForLargerScreen} cursor-pointer bg-day-theme-secondary dark:bg-night-theme-primary h-20 w-20 xl:h-24 xl:w-24 flex justify-center items-center rounded-full`}
     >
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5, delay: 1, scale: { type: "spring" } }}
-        key={nanoid}
-        className="h-16 w-16 bg-night-theme-text flex justify-center items-center rounded-full"
+        className="h-16 w-16 xl:h-20 xl:w-20 bg-night-theme-text flex justify-center items-center rounded-full"
       >
         <motion.div
           initial={{ opacity: 0 }}
