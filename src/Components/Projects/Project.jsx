@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useLanguage, useTheme } from "../store/store";
+import { useLanguage, useTheme } from "../../store/store";
 import IconArrow from "/src/assets/svg/IconArrow.jsx";
 import IconGithub from "/src/assets/svg/IconGithub.jsx";
 
@@ -12,6 +12,14 @@ function Project({ text, title }) {
   useEffect(() => {
     setFont(!font);
   }, [lang]);
+
+  useEffect(() => {
+    if (lang === "en") {
+      setFont(true);
+    } else {
+      setFont(false);
+    }
+  }, []);
 
   return (
     <div className="flex flex-col sm:flex-row max-w-[90%] max-h-[30rem] mb-20">

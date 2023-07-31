@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { forwardRef, useEffect, useState } from "react";
-import { text } from "../language/languages";
-import { useLanguage } from "../store/store";
+import { text } from "../../language/languages";
+import { useLanguage } from "../../store/store";
 import IconGmail from "/src/assets/svg/IconGmail.jsx";
 import IconTelegram from "/src/assets/svg/IconTelegram.jsx";
 import IconWhatsapp from "/src/assets/svg/IconWhatsapp.jsx";
@@ -13,6 +13,14 @@ const Contact = forwardRef(function Contact(props, ref) {
   useEffect(() => {
     setFont(!font);
   }, [lang]);
+
+  useEffect(() => {
+    if (lang === "en") {
+      setFont(true);
+    } else {
+      setFont(false);
+    }
+  }, []);
 
   return (
     <div
@@ -30,7 +38,7 @@ const Contact = forwardRef(function Contact(props, ref) {
           transition: { duration: 0.3, delay: 0.2 },
         }}
         viewport={{ once: true }}
-        className={`ml-4 mt-[4rem] mb-[0.5rem] text-7xl ${
+        className={`ml-4 mt-[4rem] mb-[0.5rem] text-6xl lg:text-7xl xl:text-8xl ${
           font ? `font-my-for-title gap-3` : `font-my-for-titleRus gap-1.5`
         }`}
       >

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { messages } from "../language/languages";
+import { messages } from "../../language/languages";
 import AvatarImg from "./AvatarImg";
 import Message from "./Message";
 

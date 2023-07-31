@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import { forwardRef } from "react";
-import { text } from "../language/languages";
-import { useLanguage } from "../store/store";
+import { text } from "../../language/languages";
+import { useLanguage } from "../../store/store";
 import LanguageMenu from "./LanguageMenu";
 import NavButton from "./NavButton";
 import ThemeSwitch from "./ThemeSwitch";

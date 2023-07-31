@@ -1,7 +1,7 @@
 import { Switch } from "@headlessui/react";
-import IconMoon from "../assets/svg/IconMoon";
-import IconSun from "../assets/svg/IconSun";
-import { useTheme } from "../store/store";
+import IconMoon from "../../assets/svg/IconMoon";
+import IconSun from "../../assets/svg/IconSun";
+import { useTheme } from "../../store/store";
 
 function ThemeSwitch() {
   const [isLight, toggleTheme] = useTheme((state) => [

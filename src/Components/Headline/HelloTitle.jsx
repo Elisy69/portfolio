@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { nanoid } from "nanoid";
 import { forwardRef, useEffect, useState } from "react";
-import { text } from "../language/languages";
-import { useLanguage } from "../store/store";
+import { text } from "../../language/languages";
+import { useLanguage } from "../../store/store";
 import AvatarSection from "./AvatarSection";
 
 const titleAnimation = {
@@ -51,6 +51,14 @@ const HelloTitle = forwardRef(function HelloTitle(props, ref) {
     });
     setFont(!font);
   }, [lang]);
+
+  useEffect(() => {
+    if (lang === "en") {
+      setFont(true);
+    } else {
+      setFont(false);
+    }
+  }, []);
 
   function renderHeader(data, custom = 0) {
     return data.map((word, index) => {

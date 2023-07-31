@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { forwardRef } from "react";
-import { text } from "../language/languages";
-import { useLanguage } from "../store/store";
+import { text } from "../../language/languages";
+import { useLanguage } from "../../store/store";
 import workAnimation from "/Users/strashevskyelisey/Desktop/coding/Projects/portfolio/src/assets/lottie_animation/animation_lk0vvq0c.json";
 
 const AboutMe = forwardRef(function AboutMe(props, ref) {
@@ -19,7 +19,7 @@ const AboutMe = forwardRef(function AboutMe(props, ref) {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 1 }}
       >
-        <p className="2xl:px-[7rem]">
+        <p className="2xl:px-[7rem] xl:px-0 lg:px-0 sm:px-[4rem] px-[1rem]">
           {text["AboutMe_1"][lang]}
           <a
             rel="noreferrer"

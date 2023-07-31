@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { nanoid } from "nanoid";
 import { forwardRef, memo, useEffect, useState } from "react";
-import { text } from "../language/languages";
-import { useLanguage } from "../store/store";
+import { text } from "../../language/languages";
+import { useLanguage } from "../../store/store";
 import Project from "./Project";
 
 const mocktext =
@@ -26,10 +26,18 @@ const ProjectsList = memo(
       setFont(!font);
     }, [lang]);
 
+    useEffect(() => {
+      if (lang === "en") {
+        setFont(true);
+      } else {
+        setFont(false);
+      }
+    }, []);
+
     return (
       <section
         ref={(el) => (ref.current[2] = el)}
-        className="flex flex-col justify-center items-center px-2 gap-6 mt-10"
+        className="flex flex-col justify-center items-center px-2 gap-6 lg:gap-32 mt-10"
       >
         <motion.h1
           initial={{
