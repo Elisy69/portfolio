@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import AboutMe from "./Components/AboutMe/AboutMe";
 import HelloTitle from "./Components/Headline/HelloTitle";
 import SocialMediaBar from "./Components/Headline/SocialMediaBar";

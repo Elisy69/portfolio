@@ -10,7 +10,11 @@ const mocktext =
 const title = "Budget app";
 
 const projects = [
-  { title: title, mocktext: mocktext, imgsrc: "public/images/mock.jpeg" },
+  {
+    title: title,
+    mocktext: mocktext,
+    imgsrc: "public/images/BudgetAppPresentation.jpg",
+  },
   { title: title, mocktext: mocktext, imgsrc: "public/images/mock.jpeg" },
   { title: title, mocktext: mocktext, imgsrc: "public/images/mock.jpeg" },
   { title: title, mocktext: mocktext, imgsrc: "public/images/mock.jpeg" },

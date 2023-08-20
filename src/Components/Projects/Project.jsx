@@ -4,7 +4,7 @@ import { useLanguage, useTheme } from "../../store/store";
 import IconArrow from "/src/assets/svg/IconArrow.jsx";
 import IconGithub from "/src/assets/svg/IconGithub.jsx";
 
-function Project({ text, title }) {
+function Project({ text, title, imgsrc }) {
   const lang = useLanguage((state) => state.lang);
   const isLight = useTheme((state) => state.isLight);
   const [font, setFont] = useState(false);
@@ -45,7 +45,7 @@ function Project({ text, title }) {
         className="sm:min-w-[40%] sm:h-[100%] overflow-hidden shadow-xl self-center"
       >
         <img
-          src="/images/mock.jpeg"
+          src={imgsrc}
           alt="project"
           className="w-full h-full object-cover object-center"
         />
