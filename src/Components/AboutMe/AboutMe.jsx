@@ -1,14 +1,17 @@
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
-import { forwardRef } from "react";
+import { forwardRef, useEffect } from "react";
 import EnglishPdf from "/resumes_pdf/CVinEnglish.pdf";
+import RussianPdf from "/resumes_pdf/CVinRussian.pdf";
 import workAnimation from "/src/assets/lottie_animation/animation_lk0vvq0c.json";
 import { text } from "/src/language/languages.js";
 import { useLanguage } from "/src/store/store.js";
 
 const AboutMe = forwardRef(function AboutMe(props, ref) {
   const lang = useLanguage((state) => [state.lang]);
-
+  useEffect(() => {
+    console.log(lang[0]);
+  }, [lang]);
   return (
     <div
       ref={(el) => (ref.current[1] = el)}
@@ -25,7 +28,7 @@ const AboutMe = forwardRef(function AboutMe(props, ref) {
           <a
             rel="noreferrer"
             target="_blank"
-            href={EnglishPdf}
+            href={lang[0] === "ru" ? RussianPdf : EnglishPdf}
             className="active:text-night-theme-secondary cursor-pointer font-bold underline underline-offset-1 text-day-theme-accent dark:text-night-theme-primary"
           >
             {text["resume"][lang]}
