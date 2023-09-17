@@ -42,7 +42,7 @@ function Project({ text, title, imgsrc, githubLink, appLink }) {
           },
         }}
         viewport={{ once: true }}
-        className="h-1/2 lg:h-[100%] lg:w-1/2 overflow-hidden shadow-xl self-left lg:self-center pl-4"
+        className="h-1/2 lg:h-[100%] lg:w-1/2 overflow-hidden shadow-xl self-left lg:self-center ml-4"
       >
         <img
           src={imgsrc}
