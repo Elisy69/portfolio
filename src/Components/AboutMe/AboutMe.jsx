@@ -3,7 +3,7 @@ import Lottie from "lottie-react";
 import { forwardRef } from "react";
 import { text } from "../../language/languages";
 import { useLanguage } from "../../store/store";
-import workAnimation from "/Users/strashevskyelisey/Desktop/coding/Projects/portfolio/src/assets/lottie_animation/animation_lk0vvq0c.json";
+import workAnimation from "/src/assets/lottie_animation/animation_lk0vvq0c.json";
 
 const AboutMe = forwardRef(function AboutMe(props, ref) {
   const lang = useLanguage((state) => [state.lang]);

@@ -4,7 +4,7 @@ import { useLanguage, useTheme } from "../../store/store";
 import IconArrow from "/src/assets/svg/IconArrow.jsx";
 import IconGithub from "/src/assets/svg/IconGithub.jsx";
 
-function Project({ text, title, imgsrc }) {
+function Project({ text, title, imgsrc, githubLink, appLink }) {
   const lang = useLanguage((state) => state.lang);
   const isLight = useTheme((state) => state.isLight);
   const [font, setFont] = useState(false);
@@ -22,7 +22,7 @@ function Project({ text, title, imgsrc }) {
   }, []);
 
   return (
-    <div className="flex flex-col sm:flex-row max-w-[90%] max-h-[30rem] mb-20">
+    <div className="flex flex-col sm:flex-row max-w-[90%] max-h-[30rem] mb-20 gap-4">
       <motion.div
         key={1}
         initial={{
@@ -42,7 +42,7 @@ function Project({ text, title, imgsrc }) {
           },
         }}
         viewport={{ once: true }}
-        className="sm:min-w-[40%] sm:h-[100%] overflow-hidden shadow-xl self-center"
+        className="sm:min-w-[50%] sm:h-[100%] overflow-hidden shadow-xl self-center"
       >
         <img
           src={imgsrc}
@@ -62,7 +62,7 @@ function Project({ text, title, imgsrc }) {
             transition: { duration: 0.3, delay: 0.2 },
           }}
           viewport={{ once: true }}
-          className={`my-[2rem] ml-4 text-2xl sm:text-4xl md:text-5xl lg:text-6xl self-start  ${
+          className={`mb-[2rem] ml-4 text-2xl sm:text-4xl md:text-5xl lg:text-6xl self-start  ${
             font ? `` : `font-my-for-titleRusTwo`
           }`}
         >
@@ -79,7 +79,7 @@ function Project({ text, title, imgsrc }) {
             transition: { duration: 0.3, delay: 0.3 },
           }}
           viewport={{ once: true }}
-          className={`ml-4 mr-4 self-start lg:text-2xl ${
+          className={`ml-4 mr-4 self-start lg:text-xl sm:text-md ${
             font ? `` : `font-my-for-titleRusTwo`
           }`}
         >
@@ -98,12 +98,16 @@ function Project({ text, title, imgsrc }) {
           }}
           viewport={{ once: true }}
         >
-          <IconGithub
-            isLight={isLight}
-            size="w-8 h-8"
-            animation="cursor-pointer hover:-translate-y-2 duration-200"
-          />
-          <IconArrow />
+          <a href={githubLink} rel="noreferrer" target="_blank">
+            <IconGithub
+              isLight={isLight}
+              size="w-8 h-8"
+              animation="cursor-pointer hover:-translate-y-2 duration-200"
+            />
+          </a>
+          <a href={appLink} rel="noreferrer" target="_blank">
+            <IconArrow />
+          </a>
         </motion.div>
       </div>
     </div>

@@ -20,7 +20,7 @@ function AvatarImg({ onClick }) {
       }}
       whileTap={{ scale: 0.99 }}
       className="peer w-fit my-4 h-20 lg:h-24 rounded-full cursor-pointer dark:bg-night-theme-primary bg-day-theme-secondary shadow shadow-black hover:shadow-md"
-      src="src/assets/images/My project.png"
+      src="/images/myPhoto.png"
       alt="my avatar img"
     />
   );

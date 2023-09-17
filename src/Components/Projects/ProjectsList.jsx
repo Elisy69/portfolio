@@ -5,26 +5,41 @@ import { text } from "../../language/languages";
 import { useLanguage } from "../../store/store";
 import Project from "./Project";
 
-const mocktext =
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus magni alias assumenda illo unde iusto, cumque necessitatibus sequi deleniti reprehenderit officiis excepturi. Consequuntur tenetur obcaecati officiis iure rerum, harum adipisci.";
-const title = "Budget app";
-
-const projects = [
-  {
-    title: title,
-    mocktext: mocktext,
-    imgsrc: "public/images/BudgetAppPresentation.jpg",
-  },
-  { title: title, mocktext: mocktext, imgsrc: "public/images/mock.jpeg" },
-  { title: title, mocktext: mocktext, imgsrc: "public/images/mock.jpeg" },
-  { title: title, mocktext: mocktext, imgsrc: "public/images/mock.jpeg" },
-  { title: title, mocktext: mocktext, imgsrc: "public/images/mock.jpeg" },
-];
-
 const ProjectsList = memo(
   forwardRef(function Projects(props, ref) {
     const lang = useLanguage((state) => state.lang);
     const [font, setFont] = useState(false);
+
+    const projects = [
+      {
+        title: "Budget App",
+        mocktext: text["budgetApp"][lang],
+        imgsrc: "/images/budgetAppPresentation.png",
+        githubLink: "https://github.com/Elisy69/Budget-planner-app",
+        appLink: "https://custom-budget-app.netlify.app/",
+      },
+      {
+        title: "Shift Calendar",
+        mocktext: text["calendarApp"][lang],
+        imgsrc: "/images/workShiftAppPresentation.png",
+        githubLink: "https://github.com/Elisy69/Work-Calendar",
+        appLink: "https://custom-work-calendar.netlify.app/",
+      },
+      {
+        title: "Book Search",
+        mocktext: text["bookSearchApp"][lang],
+        imgsrc: "/images/bookSearchAppPresentation.png",
+        githubLink: "https://github.com/Elisy69/googleBooksSearchApp",
+        appLink: "https://google-bookss-search-app.netlify.app/",
+      },
+      {
+        title: "Vizza App",
+        mocktext: text["pizzaApp"][lang],
+        imgsrc: "/images/pizzaMockImg.png",
+        githubLink: "",
+        appLink: "",
+      },
+    ];
 
     useEffect(() => {
       setFont(!font);
@@ -54,7 +69,7 @@ const ProjectsList = memo(
             transition: { duration: 0.3, delay: 0.3 },
           }}
           viewport={{ once: true }}
-          className={`my-[2rem] text-7xl lg:text-8xl xl:text-9xl self-start lg:self-center lg:mb-[12rem] ${
+          className={`my-[2rem] text-7xl lg:text-8xl xl:text-9xl self-center lg:mb-[12rem] ${
             font ? `font-my-for-title gap-3` : `font-my-for-titleRus gap-1.5`
           }`}
         >
@@ -65,6 +80,8 @@ const ProjectsList = memo(
             imgsrc={project.imgsrc}
             text={project.mocktext}
             title={project.title}
+            githubLink={project.githubLink}
+            appLink={project.appLink}
             key={nanoid()}
           />
         ))}

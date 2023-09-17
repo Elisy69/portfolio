@@ -25,7 +25,23 @@ export const text = {
   "projectsTitle": { en: "Featured Projects", ru: "Примеры проектов" },
   "contacts": {
     en: "Interested? Hit me up!",
-    ru: "Интересно? Можно написать!",
+    ru: "Интересно? Пишите!",
+  },
+  "budgetApp": {
+    en: "After tediously searching for a budget app on the App Store that could perform its core functions without unnecessary complications and features, I had the idea to create my own. This app is designed to manage both income and expenses, offering straightforward budget analysis and the ability to set long-term financial goals. Users can also plan their budgets in various currencies, as the app automatically retrieves the latest exchange rates through an open exchange rates API.",
+    ru: "После долгих поисков приложения для планирования бюджета в App Store, которое просто могло бы выполнять свои функции без нагромождения бесполезных фич, у меня появилась идея написать свое. Данное приложение считает бюджет по месяцам, предлагает анализ расходов/доходов пользователя, а также позволяет ставить финансовые цели. Пользователи также могут планировать свои бюджеты в различных валютах, так как приложение автоматически получает актуальные курсы обмена через открытое API.",
+  },
+  "calendarApp": {
+    en: "This app can tremendously help people who work in shifts because it's challenging to plan your life without knowing when your days off are for the next month. The app adapts to any work schedule using a simple algorithm to calculate workdays and days off. The calendar is built from scratch without using any libraries.",
+    ru: "Это приложение может очень помочь людям, работающим по сменам, так как сложно планировать свою жизнь, не зная, когда будут выходные в следующем месяце. Приложение адаптируется под любой график работы с использованием простого алгоритма расчета рабочих дней и выходных. Календарь создан с нуля, без использования каких-либо библиотек.",
+  },
+  "bookSearchApp": {
+    en: "This app empowers you to discover any book you desire, utilizing an open API provided by Google. You can simply click on a book to view all its details.",
+    ru: "Это приложение поможет вам отыскать любую книгу, используя открытое API, предоставленное Google. Просто кликните на книгу, чтобы увидеть все ее подробности.",
+  },
+  "pizzaApp": {
+    en: "Work in progress: a pizza ordering app written in Vue.js. One of the core features is to provide users with the ability to create their custom pizzas using a special interface.",
+    ru: "В работе. Приложение для заказа пиццы, написанное с помощью Vue.js. Главная фича - предоставление пользователю возможности создавать свою собственную пиццу, используя специальный интерфейс.",
   },
 };
 

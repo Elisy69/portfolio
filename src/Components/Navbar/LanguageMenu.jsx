@@ -13,7 +13,7 @@ function LanguageMenu() {
 
   return (
     <Menu as="div" className="ml-auto relative">
-      <Menu.Button className="flex cursor-pointer items-center justify-center rounded-lg border dark:bg-[#201341] bg-[#C5B3F8] dark:border-[#2E254D] border-[#9981DC] hover:border-violet-900 active:outline active:outline-violet-800 p-2 text-left ">
+      <Menu.Button className="flex cursor-pointer items-center justify-center rounded-lg border dark:bg-[#201341] bg-[#C5B3F8] dark:border-[#2E254D] border-[#9981DC] hover:border-violet-900 dark:hover:border-violet-900 active:outline active:outline-violet-800 p-2 text-left ">
         <IconLanguage />
       </Menu.Button>
       <Transition

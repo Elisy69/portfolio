@@ -15,11 +15,7 @@ const Contact = forwardRef(function Contact(props, ref) {
   }, [lang]);
 
   useEffect(() => {
-    if (lang === "en") {
-      setFont(true);
-    } else {
-      setFont(false);
-    }
+    lang === "en" ? setFont(true) : setFont(false);
   }, []);
 
   return (
