@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { nanoid } from "nanoid";
 import { forwardRef, useEffect, useState } from "react";
-import { text } from "../../language/languages";
-import { useLanguage } from "../../store/store";
-import AvatarSection from "./AvatarSection";
+import AvatarSection from "/src/Components/Headline/AvatarSection.jsx";
+import { text } from "/src/language/languages.js";
+import { useLanguage } from "/src/store/store.js";
 
 const titleAnimation = {
   hidden: {

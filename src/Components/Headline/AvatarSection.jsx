@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { messages } from "../../language/languages";
 import AvatarImg from "./AvatarImg";
 import Message from "./Message";
+import { messages } from "/src/language/languages.js";
 
 function AvatarSection() {
   const [messageNum, setMessageNum] = useState(0);

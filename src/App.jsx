@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
-import AboutMe from "./Components/AboutMe/AboutMe";
-import HelloTitle from "./Components/Headline/HelloTitle";
-import SocialMediaBar from "./Components/Headline/SocialMediaBar";
-import Navbar from "./Components/Navbar/Navbar";
-import ProjectsList from "./Components/Projects/ProjectsList";
-import { useTheme } from "./store/store";
+import AboutMe from "/src/Components/AboutMe/AboutMe";
 import Contact from "/src/Components/Contacts/Contact.jsx";
+import HelloTitle from "/src/Components/Headline/HelloTitle";
+import SocialMediaBar from "/src/Components/Headline/SocialMediaBar";
+import Navbar from "/src/Components/Navbar/Navbar";
+import ProjectsList from "/src/Components/Projects/ProjectsList";
+import { useTheme } from "/src/store/store.js";
 
 function App() {
   const [theme] = useTheme((state) => [state.isLight]);

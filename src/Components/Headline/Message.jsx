@@ -1,5 +1,5 @@
-import { messages } from "../../language/languages";
 import { useLanguage } from "../../store/store";
+import { messages } from "/src/language/languages.js";
 
 function Message({ messageNum }) {
   const lang = useLanguage((state) => state.lang);

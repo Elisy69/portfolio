@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { forwardRef } from "react";
-import { text } from "../../language/languages";
-import { useLanguage } from "../../store/store";
-import LanguageMenu from "./LanguageMenu";
-import NavButton from "./NavButton";
-import ThemeSwitch from "./ThemeSwitch";
+import LanguageMenu from "/src/Components/Navbar/LanguageMenu.jsx";
+import NavButton from "/src/Components/Navbar/NavButton";
+import ThemeSwitch from "/src/Components/Navbar/ThemeSwitch";
+import { text } from "/src/language/languages.js";
+import { useLanguage } from "/src/store/store.js";
 
 const menuItems = ["Home", "About", "Projects", "Contact"];
 

@@ -1,8 +1,8 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import IconLanguage from "../../assets/svg/IconLanguage";
-import { text } from "../../language/languages";
-import { useLanguage } from "../../store/store";
+import IconLanguage from "/src/assets/svg/IconLanguage.jsx";
+import { text } from "/src/language/languages.js";
+import { useLanguage } from "/src/store/store.js";
 
 function LanguageMenu() {
   const lang = useLanguage((state) => [state.lang]);

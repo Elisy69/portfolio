@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useLanguage, useTheme } from "../../store/store";
 import IconArrow from "/src/assets/svg/IconArrow.jsx";
 import IconGithub from "/src/assets/svg/IconGithub.jsx";
+import { useLanguage, useTheme } from "/src/store/store.js";
 
 function Project({ text, title, imgsrc, githubLink, appLink }) {
   const lang = useLanguage((state) => state.lang);

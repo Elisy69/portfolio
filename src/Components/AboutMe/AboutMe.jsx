@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { forwardRef } from "react";
-import { text } from "../../language/languages";
-import { useLanguage } from "../../store/store";
 import workAnimation from "/src/assets/lottie_animation/animation_lk0vvq0c.json";
+import { text } from "/src/language/languages.js";
+import { useLanguage } from "/src/store/store.js";
 
 const AboutMe = forwardRef(function AboutMe(props, ref) {
   const lang = useLanguage((state) => [state.lang]);

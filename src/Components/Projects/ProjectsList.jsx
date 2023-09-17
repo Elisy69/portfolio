@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { nanoid } from "nanoid";
 import { forwardRef, memo, useEffect, useState } from "react";
-import { text } from "../../language/languages";
-import { useLanguage } from "../../store/store";
-import Project from "./Project";
+import Project from "/src/Components/Projects/Project.jsx";
+import { text } from "/src/language/languages.js";
+import { useLanguage } from "/src/store/store.js";
 
 const ProjectsList = memo(
   forwardRef(function Projects(props, ref) {

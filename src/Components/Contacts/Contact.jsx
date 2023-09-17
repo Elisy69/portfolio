@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { forwardRef, useEffect, useState } from "react";
-import { text } from "../../language/languages";
-import { useLanguage } from "../../store/store";
 import IconGmail from "/src/assets/svg/IconGmail.jsx";
 import IconTelegram from "/src/assets/svg/IconTelegram.jsx";
 import IconWhatsapp from "/src/assets/svg/IconWhatsapp.jsx";
+import { text } from "/src/language/languages.js";
+import { useLanguage } from "/src/store/store.js";
 
 const Contact = forwardRef(function Contact(props, ref) {
   const lang = useLanguage((state) => state.lang);
