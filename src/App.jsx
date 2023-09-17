@@ -21,7 +21,6 @@ function App() {
   };
 
   useEffect(() => {
-    console.log("theme color:", `${theme ? "light" : "dark"}`);
     document.body.classList.toggle("dark");
   }, [theme]);
 

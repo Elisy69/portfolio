@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { forwardRef } from "react";
+import EnglishPdf from "/resumes_pdf/CVinEnglish.pdf";
 import workAnimation from "/src/assets/lottie_animation/animation_lk0vvq0c.json";
 import { text } from "/src/language/languages.js";
 import { useLanguage } from "/src/store/store.js";
@@ -24,7 +25,7 @@ const AboutMe = forwardRef(function AboutMe(props, ref) {
           <a
             rel="noreferrer"
             target="_blank"
-            href="https://hh.ru/resume/95aef390ff0c0ad02f0039ed1f6f584a317755?hhtmFrom=resume_list"
+            href={EnglishPdf}
             className="active:text-night-theme-secondary cursor-pointer font-bold underline underline-offset-1 text-day-theme-accent dark:text-night-theme-primary"
           >
             {text["resume"][lang]}
