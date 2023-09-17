@@ -7,7 +7,9 @@ function AvatarSection() {
   const [messageNum, setMessageNum] = useState(0);
 
   const handleAvatarClick = () => {
-    messageNum <= messages.length - 2 ? setMessageNum((prev) => prev + 1) : "";
+    if (messageNum <= messages.length - 2) {
+      setMessageNum((prev) => prev + 1);
+    }
   };
 
   return (

@@ -22,7 +22,7 @@ function Project({ text, title, imgsrc, githubLink, appLink }) {
   }, []);
 
   return (
-    <div className="flex flex-col sm:flex-row max-w-[90%] max-h-[30rem] mb-20 gap-4">
+    <div className="flex flex-col lg:flex-row max-w-[90%] h-content sm:mb-20 mb-32 gap-4">
       <motion.div
         key={1}
         initial={{
@@ -42,15 +42,17 @@ function Project({ text, title, imgsrc, githubLink, appLink }) {
           },
         }}
         viewport={{ once: true }}
-        className="sm:min-w-[50%] sm:h-[100%] overflow-hidden shadow-xl self-center"
+        className="h-1/2 lg:h-[100%] lg:w-1/2 overflow-hidden shadow-xl self-left lg:self-center pl-4"
       >
         <img
           src={imgsrc}
           alt="project"
-          className="w-full h-full object-cover object-center"
+          className={`${
+            title === "Budget App" ? `object-left` : `object-center`
+          } w-full h-full object-cover `}
         />
       </motion.div>
-      <div>
+      <div className="h-1/2 lg:h-[100%] lg:w-1/2">
         <motion.h1
           initial={{
             y: 80,

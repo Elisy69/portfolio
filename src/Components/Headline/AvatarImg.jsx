@@ -19,7 +19,7 @@ function AvatarImg({ onClick }) {
         transition: { duration: 0.3 },
       }}
       whileTap={{ scale: 0.99 }}
-      className="peer w-fit my-4 h-20 lg:h-24 rounded-full cursor-pointer dark:bg-night-theme-primary bg-day-theme-secondary shadow shadow-black hover:shadow-md"
+      className="peer w-[6rem] h-[6rem] my-4  lg:h-24 rounded-full cursor-pointer dark:bg-night-theme-primary bg-day-theme-secondary shadow shadow-black hover:shadow-md"
       src="/images/myPhoto.png"
       alt="my avatar img"
     />

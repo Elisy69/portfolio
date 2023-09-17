@@ -48,7 +48,6 @@ export const text = {
 export const messages = [
   { en: "Hey, click me", ru: "Привет, кликни на меня!" },
   { en: "You can do it again", ru: "Можно еще раз" },
-  { en: "Go on", ru: "и еще..." },
   {
     en: "I think this feature is useless",
     ru: "Не знаю, зачем я это сделал..",
@@ -59,8 +58,7 @@ export const messages = [
     ru: "Напишите, если все это вам понравилось",
   },
   { en: "...", ru: "..." },
-  { en: "Still playing with this 😂?", ru: "Зачем еще нажимать 😂?" },
   { en: "You can stop now", ru: "Все, можно остановиться)" },
-  { en: "Seriously", ru: "Серьезно)" },
-  { en: "Check the website ffs!", ru: "Лучше зацените уже сайт!)" },
+
+  { en: "Check the website ffs😂", ru: "Лучше зацените уже сайт😂" },
 ];

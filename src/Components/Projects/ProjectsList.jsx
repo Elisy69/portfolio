@@ -69,7 +69,7 @@ const ProjectsList = memo(
             transition: { duration: 0.3, delay: 0.3 },
           }}
           viewport={{ once: true }}
-          className={`my-[2rem] text-7xl lg:text-8xl xl:text-9xl self-center lg:mb-[12rem] ${
+          className={`my-[2rem] text-6xl text-center md:text-7xl lg:text-8xl xl:text-9xl self-center lg:mb-[12rem] ${
             font ? `font-my-for-title gap-3` : `font-my-for-titleRus gap-1.5`
           }`}
         >
