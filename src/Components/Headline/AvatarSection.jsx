@@ -15,7 +15,6 @@ function AvatarSection() {
   return (
     <div className="flex items-center gap-4">
       <AvatarImg onClick={handleAvatarClick} />
-      ``
       <Message messageNum={messageNum} />
     </div>
   );
