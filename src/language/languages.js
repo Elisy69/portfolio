@@ -15,12 +15,12 @@ export const text = {
   "Contact": { en: "Contact", ru: "Связь" },
   "AboutMe_1": {
     en: "With over two years of coding experience, I write in JavaScript, TypeScript, React and Vue. I take great pleasure in designing responsive and cross-browser interfaces that enhance user experiences. ",
-    ru: "В целом имею два года опыта разработки. Пишу на JavaScript/TypeScript, для работы и в проектах использую Vue и React. По части других технологий - Вы можете посмотреть ",
+    ru: "В целом имею два года опыта разработки. Пишу на JavaScript/TypeScript, для работы и в проектах использую Vue и React.",
   },
   "resume": { en: "My resume", ru: "мое резюме," },
   "AboutMe_2": {
-    en: "provides a comprehensive overview of my web development stack. However, I am also eager to learn new technologies that your team is working with. Additionally, I have a C1-C2 proficiency in English.",
-    ru: " чтобы увидеть весь остальной стек. Однако, я открыт к максимально быстрому освоению любых новых для меня технологий, которые использует ваша команда. Также я свободно владею английским, что очень сильно помогает самостоятельно находить решение проблем/сразу лезть в документацию за разъяснениями.",
+    en: "I am eager to learn new technologies that your team is working with. Additionally, I have a C1-C2 proficiency in English.",
+    ru: "Я открыт к максимально быстрому освоению любых новых для меня технологий, которые использует ваша команда. Также я свободно владею английским, что очень сильно помогает самостоятельно находить решение проблем/сразу лезть в документацию за разъяснениями.",
   },
   "projectsTitle": { en: "Featured Projects", ru: "Примеры проектов" },
   "contacts": {
