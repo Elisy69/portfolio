@@ -39,9 +39,13 @@ export const text = {
     en: "This app empowers you to discover any book you desire, utilizing an open API provided by Google. You can simply click on a book to view all its details.",
     ru: "Это приложение поможет вам отыскать любую книгу, используя открытое API, предоставленное Google. Просто кликните на книгу, чтобы увидеть все ее подробности.",
   },
-  pizzaApp: {
-    en: "Work in progress: a pizza ordering app written in Vue.js. One of the core features is to provide users with the ability to create their custom pizzas using a special interface.",
-    ru: "В работе. Приложение для заказа пиццы, написанное с помощью Vue.js. Главная фича - предоставление пользователю возможности создавать свою собственную пиццу, используя специальный интерфейс.",
+  github: {
+    en: "A Vue.js application designed for efficiently searching GitHub repositories. This user-friendly app enables users to input repository names, perform searches, and view a list of matching repositories with direct links to their GitHub pages.",
+    ru: "Приложение написанное с помощью Vue для поиска репозиториев на GitHub. С его помощью пользователи могут вводить названия репозиториев, выполнять поиск и просматривать список подходящих репозиториев с прямыми ссылками на соответствующие страницы на GitHub.",
+  },
+  budgetAppPWA: {
+    en: "(In development) This is a rework of my previous project because I personally use it, but I wanted to make it better. It will be a Progressive Web Application (PWA), primarily designed for mobile usage, with the frontend built using Vue. It will have its own domain and a backend developed from scratch, utilizing a stack of Nginx, Node.js with Express, PostgreSQL, and Prisma.",
+    ru: "(В разработке) Это переработка предыдущего проекта, потому что я им пользуюсь, но мне хотелось сделать лучше. Это будет PWA приложение (в первую очередь, для телефона) с фронтом на Vue, собственным доменом и бэкендом с нуля (стек - nginx, node.js - express, postgres, prisma).",
   },
 };
 

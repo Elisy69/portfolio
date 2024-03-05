@@ -81,7 +81,7 @@ function Project({ text, title, imgsrc, githubLink, appLink }) {
             transition: { duration: 0.3, delay: 0.3 },
           }}
           viewport={{ once: true }}
-          className={`ml-4 mr-4 self-start lg:text-xl sm:text-md ${
+          className={`ml-4 mr-4 self-start lg:text-xl sm:text-md  ${
             font ? `` : `font-my-for-titleRusTwo`
           }`}
         >

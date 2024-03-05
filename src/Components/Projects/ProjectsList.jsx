@@ -19,6 +19,13 @@ const ProjectsList = memo(
         appLink: "https://custom-budget-app.netlify.app/",
       },
       {
+        title: "Budget App PWA",
+        mocktext: text["budgetAppPWA"][lang],
+        imgsrc: "/images/budgetPWAconcept.png",
+        githubLink: "https://github.com/Elisy69/budget_app_backend",
+        appLink: "https://бюджет-апп.рф",
+      },
+      {
         title: "Shift Calendar",
         mocktext: text["calendarApp"][lang],
         imgsrc: "/images/workShiftAppPresentation.png",
@@ -33,11 +40,11 @@ const ProjectsList = memo(
         appLink: "https://google-bookss-search-app.netlify.app/",
       },
       {
-        title: "Vizza App",
-        mocktext: text["pizzaApp"][lang],
-        imgsrc: "/images/pizzaMockImg.png",
-        githubLink: "",
-        appLink: "",
+        title: "GitHub Search Repos",
+        mocktext: text["github"][lang],
+        imgsrc: "/images/githubsearch.png",
+        githubLink: "https://github.com/Elisy69/git_repos_search_app",
+        appLink: "https://classy-platypus-abb298.netlify.app/",
       },
     ];
 
@@ -87,7 +94,7 @@ const ProjectsList = memo(
         ))}
       </section>
     );
-  })
+  }),
 );
 
 export default ProjectsList;
