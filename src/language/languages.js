@@ -14,7 +14,7 @@ export const text = {
   Projects: { en: "Projects", ru: "Проекты" },
   Contact: { en: "Contact", ru: "Связь" },
   AboutMe_1: {
-    en: "With over two years of coding experience, I write in JavaScript, TypeScript, React and Vue. I take great pleasure in designing responsive and cross-browser interfaces that enhance user experiences. ",
+    en: "With over a year of coding experience, I write in JavaScript, TypeScript, React and Vue. I take great pleasure in designing responsive and cross-browser interfaces that enhance user experiences. ",
     ru: "В целом имею более года опыта разработки. Пишу на JavaScript/TypeScript, для работы и в проектах использую Vue и React.",
   },
   resume: { en: "My resume", ru: "мое резюме," },
