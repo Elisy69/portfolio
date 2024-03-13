@@ -26,6 +26,13 @@ const ProjectsList = memo(
         appLink: "https://бюджет-апп.рф",
       },
       {
+        title: "GitHub Search Repos",
+        mocktext: text["github"][lang],
+        imgsrc: "/images/githubsearch.png",
+        githubLink: "https://github.com/Elisy69/git_repos_search_app",
+        appLink: "https://classy-platypus-abb298.netlify.app/",
+      },
+      {
         title: "Shift Calendar",
         mocktext: text["calendarApp"][lang],
         imgsrc: "/images/workShiftAppPresentation.png",
@@ -38,13 +45,6 @@ const ProjectsList = memo(
         imgsrc: "/images/bookSearchAppPresentation.png",
         githubLink: "https://github.com/Elisy69/googleBooksSearchApp",
         appLink: "https://google-bookss-search-app.netlify.app/",
-      },
-      {
-        title: "GitHub Search Repos",
-        mocktext: text["github"][lang],
-        imgsrc: "/images/githubsearch.png",
-        githubLink: "https://github.com/Elisy69/git_repos_search_app",
-        appLink: "https://classy-platypus-abb298.netlify.app/",
       },
     ];
 
